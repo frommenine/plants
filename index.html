@@ -9,22 +9,25 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./assets/icons/leafs.svg" type="image/x-icon">
+    <link rel="stylesheet" href="tablet&mobile.css">
+    <link rel="stylesheet" href="menu.css">
 </head>
 
 <body>
     <nav class="nav wrapper">
         <div class="nav-wrap">
             <img class="logo" src="./assets/img/logo.png" alt="logo">
-            <ul class="nav-list-item">
-                <li class="nav-item"><a href="./index.html">Home</a></li>
-                <li class="nav-item"><a href="#about">About us</a></li>
-                <li class="nav-item"><a href="#service">Service</a></li>
-                <li class="nav-item"><a href="#price">Price</a></li>
-                <li class="nav-item"><a href="#contacts">Contacts</a></li>
+            <ul class="nav-list-item" id="myDropdown">
+                <li class="nav-item"><a class="link" href="./index.html">Home</a></li>
+                <li class="nav-item"><a class="link" href="#about">About us</a></li>
+                <li class="nav-item"><a class="link" href="#service">Service</a></li>
+                <li class="nav-item"><a class="link" href="#price">Price</a></li>
+                <li class="nav-item"><a class="link" href="#contacts">Contacts</a></li>
             </ul>
-            <img src="./assets/icons/burger-open-ico.png" alt="burger-open" class="burger-open-ico">
-            <!-- <div class="burger-open"></div> -->
-            <div class="menu-open"></div>
+            <div class="burger">
+                <img class="burger-open-ico ico" src="./assets/icons/burger-open-ico.png" alt="burger-open">
+                <img class="burger-close-ico ico" src="./assets/icons/burger-close-ico.png" alt="burger-close">
+            </div>
         </div>
     </nav>
 
@@ -59,7 +62,10 @@
                         unchanged.
                     </p>
                 </div>
-                <img class="about-img" src="./assets/img/monstera.png" alt="monstera">
+                <div class="about-img">
+                    <!-- <img class="about-pic" src="./assets/img/monstera.png" alt="monstera"> -->
+
+                </div>
             </div>
         </section>
         <section class="service wrapper" id="service">
@@ -67,43 +73,43 @@
                 <div class="service-head">
                     <h2 class="service-title">Service and our projects</h2>
                     <div class="service-btn-wrap">
-                        <button class="service-btn">Gardens</button>
-                        <button class="service-btn">Lawn</button>
-                        <button class="service-btn">Planting</button>
+                        <button class="service-btn garden-btn">Gardens</button>
+                        <button class="service-btn lawn-btn">Lawn</button>
+                        <button class="service-btn planting-btn">Planting</button>
                     </div>
                 </div>
                 <div class="service-wrap-cards">
-                    <div class="service-card">
+                    <div class="service-card garden">
                         <img class="service-card-img" src="./assets/img/service_first.jpg" alt="service">
                         <h3 class="service-card-title">Garden care</h3>
                         <p class="service-card-text">Lorem Ipsum has been the industry</p>
                     </div>
 
-                    <div class="service-card">
+                    <div class="service-card planting">
                         <img class="service-card-img" src="./assets/img/service_2.jpg" alt="service">
                         <h3 class="service-card-title">Planting</h3>
                         <p class="service-card-text">Lorem Ipsum has been the industry</p>
                     </div>
 
-                    <div class="service-card">
+                    <div class="service-card lawn">
                         <img class="service-card-img" src="./assets/img/service_3.jpg" alt="service">
                         <h3 class="service-card-title">Lawn care</h3>
                         <p class="service-card-text">Lorem Ipsum has been the industry</p>
                     </div>
 
-                    <div class="service-card">
+                    <div class="service-card planting">
                         <img class="service-card-img" src="./assets/img/service_4.jpg" alt="service">
                         <h3 class="service-card-title">Planting</h3>
                         <p class="service-card-text">Lorem Ipsum has been the industry</p>
                     </div>
 
-                    <div class="service-card">
+                    <div class="service-card garden">
                         <img class="service-card-img" src="./assets/img/service_5.jpg" alt="service">
                         <h3 class="service-card-title">Garden care</h3>
                         <p class="service-card-text">Lorem Ipsum has been the industry</p>
                     </div>
 
-                    <div class="service-card">
+                    <div class="service-card planting">
                         <img class="service-card-img" src="./assets/img/service_6.jpg" alt="service">
                         <h3 class="service-card-title">Planting</h3>
                         <p class="service-card-text">Lorem Ipsum has been the industry</p>
@@ -118,17 +124,56 @@
                     <div class="prices-left">
                         <h2 class="prices-title">Prices</h2>
                         <div class="prices-wrap-item">
-                            <div class="prices-item">
+                            <div class="prices-item prices-itemB">
                                 <p class="prices-item-text">Basics</p>
                                 <img class="prices-item-btn" src="./assets/img/accordion_btn.png" alt="accordion_btn">
                             </div>
-                            <div class="prices-item">
+                            <div class="prices-item-basics basics">
+                                <div class="top">
+                                    <p class="prices-item-text">Basics</p>
+                                    <img class="prices-item-btn" src="./assets/icons/prices-btn-dark.png"
+                                        alt="accordion_btn">
+                                </div>
+                                <p class="prices-item-basics-text">
+                                    Release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                                </p>
+                                <p class="prices-item-basics-text-price"><span>$15</span> / per hour</p>
+
+                                <button class="prices-item-order"><a href="#order">Order</a></button>
+                            </div>
+                            <div class="prices-item prices-itemS">
                                 <p class="prices-item-text">Standard</p>
                                 <img class="prices-item-btn" src="./assets/img/accordion_btn.png" alt="accordion_btn">
                             </div>
-                            <div class="prices-item">
+                            <div class="prices-item-basics standard">
+                                <div class="topS">
+                                    <p class="prices-item-text">Standard</p>
+                                    <img class="prices-item-btn" src="./assets/icons/prices-btn-dark.png"
+                                        alt="accordion_btn">
+                                </div>
+                                <p class="prices-item-basics-text">
+                                    Release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                                </p>
+                                <p class="prices-item-basics-text-price"><span>$25</span> / per hour</p>
+
+                                <button class="prices-item-order"><a href="#order">Order</a></button>
+                            </div>
+                            <div class="prices-item prices-itemC">
                                 <p class="prices-item-text">Pro care</p>
                                 <img class="prices-item-btn" src="./assets/img/accordion_btn.png" alt="accordion_btn">
+                            </div>
+                            <div class="prices-item-basics care">
+                                <div class="topC">
+                                    <p class="prices-item-text">Pro care</p>
+                                    <img class="prices-item-btn" src="./assets/icons/prices-btn-dark.png"
+                                        alt="accordion_btn">
+                                </div>
+                                <p class="prices-item-basics-text">
+                                    Release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                                </p>
+                                <p class="prices-item-basics-text-price"><span>$35</span> / per hour</p>
+
+                                <button class="prices-item-order"><a href="#order">Order</a></button>
                             </div>
                         </div>
                     </div>
@@ -144,10 +189,22 @@
         <section class="contacts" id="contacts">
             <div class="contacts-wrap">
                 <div class="contacts-woman"></div>
-                <h2 class="contacts-title">Contact us</h2>
+                <h2 class="contacts-title" id="order">Contact us</h2>
                 <div class="contacts-btn">
                     <span class="contacts-btn-name">City</span>
                     <img class="contacts-item-btn" src="./assets/img/contact-accordion_btn.png" alt="contact-btn">
+                </div>
+                <div class="contacts-choice">
+                    <div class="contacts-btn-green">
+                        <span class="contacts-btn-name">City</span>
+                        <img class="contacts-item-btn" src="./assets/icons/city-top.png" alt="contact-btn">
+                    </div>
+                    <div class="contacts-blue">
+                        <p class="contacts-city">Canandaigua, NY</p>
+                        <p class="contacts-city">New York City</p>
+                        <p class="contacts-city">Yonkers, NY</p>
+                        <p class="contacts-city">Sherrill, NY</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -155,30 +212,30 @@
     <footer class="footer">
         <div class="footer-wrap">
             <div class="footer-left">
-                <span class="footer-left__item">&#169</span>
+                <span class="footer-left__item">&#169;</span>
                 <span class="footer-left__item">2022</span>
-                <a class="footer-left__item" href="https://github.com/frommenine" target="_blank">github</a>
+                <a class="footer-left__item github" href="https://github.com/frommenine" target="_blank">github</a>
             </div>
             <a class="footer-middle" href="https://rs.school/js/" target="_blank">Rolling Scopes School</a>
             <ul class="footer-right">
                 <li>
                     <a class="footer__link" href="https://www.instagram.com/frommenine/" target="_blank">
-                        <img class="footer__link-ico" src="./assets/icons/inst 1.svg" alt="footer__link-ico">
+                        <img class="footer__link-ico" src="./assets/icons/inst1.svg" alt="footer__link-ico">
                     </a>
                 </li>
                 <li>
                     <a class="footer__link" href="https://www.facebook.com/liza.bogusch/" target="_blank">
-                        <img class="footer__link-ico" src="./assets/icons/fb 1.svg" alt="footer__link-ico">
+                        <img class="footer__link-ico" src="./assets/icons/fb1.svg" alt="footer__link-ico">
                     </a>
                 </li>
                 <li>
                     <a class="footer__link" href="https://twitter.com/magicpand" target="_blank">
-                        <img class="footer__link-ico" src="./assets/icons/tw 1.svg" alt="footer__link-ico">
+                        <img class="footer__link-ico" src="./assets/icons/tw1.svg" alt="footer__link-ico">
                     </a>
                 </li>
                 <li>
                     <a class="footer__link" href="https://www.pinterest.com/frommenine/" target="_blank">
-                        <img class="footer__link-ico" src="./assets/icons/pinterest 1.svg" alt="footer__link-ico">
+                        <img class="footer__link-ico" src="./assets/icons/pinterest1.svg" alt="footer__link-ico">
                     </a>
                 </li>
             </ul>
